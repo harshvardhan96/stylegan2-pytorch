@@ -73,20 +73,20 @@ def train_from_folder(
     results_dir = './results',
     models_dir = './models',
     name = 'default',
-    new = False,
+    new = True,
     load_from = -1,
     image_size = 128,
     network_capacity = 16,
     fmap_max = 512,
     transparent = False,
-    batch_size = 5,
+    batch_size = 2,
     gradient_accumulate_every = 6,
     num_train_steps = 150000,
     learning_rate = 2e-4,
     lr_mlp = 0.1,
     ttur_mult = 1.5,
     rel_disc_loss = False,
-    num_workers =  None,
+    num_workers =  0,
     save_every = 1000,
     evaluate_every = 1000,
     generate = False,
@@ -188,3 +188,5 @@ def train_from_folder(
 
 def main():
     fire.Fire(train_from_folder)
+
+main()
